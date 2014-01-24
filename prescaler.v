@@ -10,22 +10,22 @@ module prescaler
 	);
 	
 	reg [N-1:0] bitCount;
-	reg tick_reg;
+	//reg tick_reg;
 
 	always @(posedge clk)
 		begin
 			if (rst)
-				begin
+				//begin
 					bitCount = bitTime;
-					tick_reg = 0;
-				end
+					//tick_reg = 0;
+				//end
 			else
 				begin
 					if (bitCount == 13'b0) 
-						begin
-							tick_reg = ~tick_reg;
+						//begin
+							//tick_reg = ~tick_reg;
 							bitCount = bitTime;
-						end
+						//end
 					else bitCount = bitCount - 1'b1; 
 				end
 		end

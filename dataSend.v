@@ -52,8 +52,11 @@ module dataSend
 						tx_next = 1'b1;
 						if (enable)
 							begin
-								state_next = START;
-								data_next = data_o_bus;
+								if (q == 13'b0)
+									begin
+										state_next = START;
+										data_next = data_o_bus;
+									end
 							end			
 					end
 				

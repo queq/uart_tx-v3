@@ -15,12 +15,18 @@ module uart_tx_TB;
 			enable = 0;
 			data_o_bus = 8'b0;
 			#50 rst = 0;
-			#1350 enable = 1;
-			data_o_bus = 'd52; //0011 0100
-			#20000 enable = 0;
-			data_o_bus = 'd103; //0110 0111
-			#20000 enable = 1;
-			#20000 enable = 0;
+			#1450 enable = 1;
+			data_o_bus = 'h48; //0100 1000 - H
+			#50 enable = 0;
+			#1099950 enable = 1;
+			data_o_bus = 'h6F; //0110 1111 - o
+			#50 enable = 0;
+			#1099950 enable = 1;
+			data_o_bus = 'h6C; //0110 1100 - l
+			#50 enable = 0;
+			#1099950 enable = 1;
+			data_o_bus = 'h61; //0110 0001 - a
+			#50 enable = 0;
 		end
 
 	initial
@@ -36,6 +42,6 @@ module uart_tx_TB;
 	initial begin: TEST_CASE
 		$dumpfile("uart_tx_TB.vcd");
 		$dumpvars(-1, uut);
-		#3000000 $finish;
+		#4000000 $finish;
 	end  
 endmodule

@@ -2,7 +2,7 @@ UART TX, version 3
 ==========
 
 Final version of a modified UART transmitter, written in Verilog.
-Although parameters are fully configurable, the current specs are: 
+The current specs are: 
 
 * Speed: 9600 bits/second
 * 8-bit data
@@ -12,3 +12,5 @@ Although parameters are fully configurable, the current specs are:
 * Idle on high
 * Enable signal must go low before sending new data (this was made on purpose)
 * This was made to work with Xbee modules
+
+These are fully configurable, some via just changing parameters inside #() parentheses.

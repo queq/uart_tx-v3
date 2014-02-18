@@ -21,7 +21,7 @@ module prescaler
 				//end
 			else
 				begin
-					if (bitCount == 13'b0) 
+					if (bitCount == 14'b0) 
 						//begin
 							//tick_reg = ~tick_reg;
 							bitCount = bitTime;

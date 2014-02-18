@@ -1,5 +1,5 @@
 Revision 3
-; Created by bitgen P.68d at Fri Jan 24 10:57:53 2014
+; Created by bitgen P.68d at Wed Jan 29 10:09:57 2014
 ; Bit lines have the following form:
 ; <offset> <frame address> <frame offset> <information>
 ; <information> may be zero or more <kw>=<value> pairs
@@ -31,37 +31,40 @@ Revision 3
 ;                      special meaning to software reading the .ll file.
 ;
 Info STARTSEL0=1
-Bit 18666083 0x00401b9f   1283 Block=SLICE_X88Y70 Latch=AQ Net=transmitter/state_reg_FSM_FFd1
-Bit 18666108 0x00401b9f   1308 Block=SLICE_X88Y70 Latch=BQ Net=transmitter/state_reg_FSM_FFd2
-Bit 18666114 0x00401b9f   1314 Block=SLICE_X89Y70 Latch=CQ Net=transmitter/bits_reg<0>
-Bit 18666122 0x00401b9f   1322 Block=SLICE_X89Y70 Latch=CMUX Net=N3
-Bit 18666132 0x00401b9f   1332 Block=SLICE_X89Y70 Latch=DMUX Net=transmitter/bits_reg<2>
-Bit 18666139 0x00401b9f   1339 Block=SLICE_X89Y70 Latch=DQ Net=transmitter/bits_reg<1>
-Bit 18666148 0x00401b9f   1348 Block=SLICE_X89Y71 Latch=AQ Net=freqDiv/bitCount<0>
-Bit 18666173 0x00401b9f   1373 Block=SLICE_X89Y71 Latch=BQ Net=freqDiv/bitCount<1>
-Bit 18666178 0x00401b9f   1378 Block=SLICE_X89Y71 Latch=CQ Net=freqDiv/bitCount<2>
-Bit 18666195 0x00401b9f   1395 Block=SLICE_X88Y71 Latch=DMUX Net=freqDiv/bitCount[12]_GND_2_o_equal_2_o_0
-Bit 18666196 0x00401b9f   1396 Block=SLICE_X89Y71 Latch=DMUX Net=Result<3>
-Bit 18666211 0x00401b9f   1411 Block=SLICE_X88Y72 Latch=AQ Net=freqDiv/bitCount<4>
-Bit 18666213 0x00401b9f   1413 Block=SLICE_X89Y72 Latch=AMUX Net=Result<4>
-Bit 18666214 0x00401b9f   1414 Block=SLICE_X88Y72 Latch=AMUX Net=freqDiv/bitCount<3>
-Bit 18666236 0x00401b9f   1436 Block=SLICE_X88Y72 Latch=BQ Net=freqDiv/bitCount<6>
-Bit 18666237 0x00401b9f   1437 Block=SLICE_X89Y72 Latch=BQ Net=freqDiv/bitCount<5>
-Bit 18666250 0x00401b9f   1450 Block=SLICE_X89Y72 Latch=CMUX Net=Result<6>
-Bit 18666259 0x00401b9f   1459 Block=SLICE_X88Y72 Latch=DMUX Net=freqDiv/bitCount<10>
-Bit 18666266 0x00401b9f   1466 Block=SLICE_X88Y72 Latch=DQ Net=freqDiv/bitCount<12>
-Bit 18666267 0x00401b9f   1467 Block=SLICE_X89Y72 Latch=DQ Net=freqDiv/bitCount<7>
-Bit 18666276 0x00401b9f   1476 Block=SLICE_X89Y73 Latch=AQ Net=freqDiv/bitCount<8>
-Bit 18666301 0x00401b9f   1501 Block=SLICE_X89Y73 Latch=BQ Net=freqDiv/bitCount<9>
-Bit 18666314 0x00401b9f   1514 Block=SLICE_X89Y73 Latch=CMUX Net=Result<10>
-Bit 18666331 0x00401b9f   1531 Block=SLICE_X89Y73 Latch=DQ Net=freqDiv/bitCount<11>
-Bit 18666341 0x00401b9f   1541 Block=SLICE_X89Y74 Latch=AMUX Net=Result<12>
-Bit 18666564 0x00401b9f   1764 Block=SLICE_X89Y77 Latch=AQ Net=transmitter/data_reg<0>
-Bit 18666565 0x00401b9f   1765 Block=SLICE_X89Y77 Latch=AMUX Net=transmitter/data_reg<7>
-Bit 18666583 0x00401b9f   1783 Block=SLICE_X89Y77 Latch=BMUX Net=transmitter/data_reg<2>
-Bit 18666589 0x00401b9f   1789 Block=SLICE_X89Y77 Latch=BQ Net=transmitter/data_reg<1>
-Bit 18666594 0x00401b9f   1794 Block=SLICE_X89Y77 Latch=CQ Net=transmitter/data_reg<3>
-Bit 18666602 0x00401b9f   1802 Block=SLICE_X89Y77 Latch=CMUX Net=transmitter/data_reg<4>
-Bit 18666612 0x00401b9f   1812 Block=SLICE_X89Y77 Latch=DMUX Net=transmitter/data_reg<6>
-Bit 18666619 0x00401b9f   1819 Block=SLICE_X89Y77 Latch=DQ Net=transmitter/data_reg<5>
-Bit 18666757 0x00401b9f   1957 Block=SLICE_X89Y80 Latch=AMUX Net=isDone_OBUF
+Bit  3287397 0x00000e1f    453 Block=SLICE_X47Y107 Latch=AMUX Net=Result<0>
+Bit  3287421 0x00000e1f    477 Block=SLICE_X47Y107 Latch=BQ Net=freqDiv/bitCount<1>
+Bit  3287426 0x00000e1f    482 Block=SLICE_X47Y107 Latch=CQ Net=freqDiv/bitCount<2>
+Bit  3287451 0x00000e1f    507 Block=SLICE_X47Y107 Latch=DQ Net=freqDiv/bitCount<3>
+Bit  3287459 0x00000e1f    515 Block=SLICE_X46Y108 Latch=AQ Net=freqDiv/bitCount<0>
+Bit  3287461 0x00000e1f    517 Block=SLICE_X47Y108 Latch=AMUX Net=Result<4>
+Bit  3287479 0x00000e1f    535 Block=SLICE_X47Y108 Latch=BMUX Net=Result<5>
+Bit  3287489 0x00000e1f    545 Block=SLICE_X46Y108 Latch=CQ Net=freqDiv/bitCount<13>
+Bit  3287490 0x00000e1f    546 Block=SLICE_X47Y108 Latch=CQ Net=freqDiv/bitCount<6>
+Bit  3287508 0x00000e1f    564 Block=SLICE_X47Y108 Latch=DMUX Net=Result<7>
+Bit  3287524 0x00000e1f    580 Block=SLICE_X47Y109 Latch=AQ Net=freqDiv/bitCount<8>
+Bit  3287549 0x00000e1f    605 Block=SLICE_X47Y109 Latch=BQ Net=freqDiv/bitCount<9>
+Bit  3287554 0x00000e1f    610 Block=SLICE_X47Y109 Latch=CQ Net=freqDiv/bitCount<10>
+Bit  3287572 0x00000e1f    628 Block=SLICE_X47Y109 Latch=DMUX Net=Result<11>
+Bit  3287588 0x00000e1f    644 Block=SLICE_X47Y110 Latch=AQ Net=freqDiv/bitCount<12>
+Bit  3287607 0x00000e1f    663 Block=SLICE_X47Y110 Latch=BMUX Net=Result<13>
+Bit  3403811 0x00000e9f    515 Block=SLICE_X48Y108 Latch=AQ Net=freqDiv/bitCount<4>
+Bit  3403836 0x00000e9f    540 Block=SLICE_X48Y108 Latch=BQ Net=freqDiv/bitCount<5>
+Bit  3403841 0x00000e9f    545 Block=SLICE_X48Y108 Latch=CQ Net=freqDiv/bitCount<7>
+Bit  3403860 0x00000e9f    564 Block=SLICE_X49Y108 Latch=DMUX Net=freqDiv/bitCount[13]_GND_2_o_equal_2_o_0
+Bit  3403866 0x00000e9f    570 Block=SLICE_X48Y108 Latch=DQ Net=freqDiv/bitCount<11>
+Bit  3520164 0x00000f1f    516 Block=SLICE_X51Y108 Latch=AQ Net=transmitter/state_reg_FSM_FFd1
+Bit  3520165 0x00000f1f    517 Block=SLICE_X51Y108 Latch=AMUX Net=transmitter/_n0094_inv
+Bit  3520189 0x00000f1f    541 Block=SLICE_X51Y108 Latch=BQ Net=transmitter/state_reg_FSM_FFd2
+Bit  3520193 0x00000f1f    545 Block=SLICE_X50Y108 Latch=CQ Net=transmitter/bits_reg<0>
+Bit  3520201 0x00000f1f    553 Block=SLICE_X50Y108 Latch=CMUX Net=N3
+Bit  3520211 0x00000f1f    563 Block=SLICE_X50Y108 Latch=DMUX Net=transmitter/bits_reg<2>
+Bit  3520218 0x00000f1f    570 Block=SLICE_X50Y108 Latch=DQ Net=transmitter/bits_reg<1>
+Bit  3966181 0x0000111f    517 Block=SLICE_X57Y108 Latch=AMUX Net=done_OBUF
+Bit 18434115 0x00401a9f   2019 Block=SLICE_X84Y81 Latch=AQ Net=transmitter/data_reg<0>
+Bit 18434118 0x00401a9f   2022 Block=SLICE_X84Y81 Latch=AMUX Net=transmitter/data_reg<7>
+Bit 18434134 0x00401a9f   2038 Block=SLICE_X84Y81 Latch=BMUX Net=transmitter/data_reg<2>
+Bit 18434140 0x00401a9f   2044 Block=SLICE_X84Y81 Latch=BQ Net=transmitter/data_reg<1>
+Bit 18434145 0x00401a9f   2049 Block=SLICE_X84Y81 Latch=CQ Net=transmitter/data_reg<3>
+Bit 18434153 0x00401a9f   2057 Block=SLICE_X84Y81 Latch=CMUX Net=transmitter/data_reg<4>
+Bit 18434163 0x00401a9f   2067 Block=SLICE_X84Y81 Latch=DMUX Net=transmitter/data_reg<6>
+Bit 18434170 0x00401a9f   2074 Block=SLICE_X84Y81 Latch=DQ Net=transmitter/data_reg<5>

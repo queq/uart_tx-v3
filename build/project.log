@@ -63,7 +63,7 @@ Parsing module <prescaler>.
 
 Elaborating module <uart_tx>.
 
-Elaborating module <prescaler(bitTime=5208,N=13)>.
+Elaborating module <prescaler(bitTime=10417,N=14)>.
 
 Elaborating module <dataSend(BITS=8)>.
 
@@ -74,21 +74,21 @@ Elaborating module <dataSend(BITS=8)>.
 Synthesizing Unit <uart_tx>.
     Related source file is "/home/sergio/Code/uart_tx-v3/uart_tx.v".
         N_BITS = 8
-        M = 5208
-        N = 13
+        M = 10417
+        N = 14
     Summary:
 	no macro.
 Unit <uart_tx> synthesized.
 
 Synthesizing Unit <prescaler>.
     Related source file is "/home/sergio/Code/uart_tx-v3/prescaler.v".
-        bitTime = 5208
-        N = 13
-    Found 13-bit register for signal <bitCount>.
-    Found 13-bit subtractor for signal <bitCount[12]_GND_2_o_sub_3_OUT> created at line 29.
+        bitTime = 10417
+        N = 14
+    Found 14-bit register for signal <bitCount>.
+    Found 14-bit subtractor for signal <bitCount[13]_GND_2_o_sub_3_OUT> created at line 29.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  13 D-type flip-flop(s).
+	inferred  14 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
 Unit <prescaler> synthesized.
 
@@ -102,7 +102,7 @@ Synthesizing Unit <dataSend>.
     Found finite state machine <FSM_0> for signal <state_reg>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
-    | Transitions        | 10                                             |
+    | Transitions        | 11                                             |
     | Inputs             | 3                                              |
     | Outputs            | 3                                              |
     | Clock              | clk (rising_edge)                              |
@@ -112,7 +112,7 @@ Synthesizing Unit <dataSend>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit adder for signal <bits_reg[2]_GND_3_o_add_10_OUT> created at line 79.
+    Found 3-bit adder for signal <bits_reg[2]_GND_3_o_add_13_OUT> created at line 82.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  12 D-type flip-flop(s).
@@ -125,15 +125,15 @@ HDL Synthesis Report
 
 Macro Statistics
 # Adders/Subtractors                                   : 2
- 13-bit subtractor                                     : 1
+ 14-bit subtractor                                     : 1
  3-bit adder                                           : 1
 # Registers                                            : 4
  1-bit register                                        : 1
- 13-bit register                                       : 1
+ 14-bit register                                       : 1
  3-bit register                                        : 1
  8-bit register                                        : 1
 # Multiplexers                                         : 3
- 13-bit 2-to-1 multiplexer                             : 1
+ 14-bit 2-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 1
@@ -158,7 +158,7 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # Counters                                             : 2
- 13-bit down counter                                   : 1
+ 14-bit down counter                                   : 1
  3-bit up counter                                      : 1
 # Registers                                            : 9
  Flip-Flops                                            : 9
@@ -196,8 +196,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 27
- Flip-Flops                                            : 27
+# Registers                                            : 28
+ Flip-Flops                                            : 28
 
 =========================================================================
 
@@ -220,23 +220,24 @@ Top Level Output File Name         : project.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 67
+# BELS                             : 72
 #      GND                         : 1
-#      INV                         : 12
+#      INV                         : 14
 #      LUT1                        : 1
 #      LUT2                        : 4
-#      LUT3                        : 10
-#      LUT4                        : 7
-#      LUT6                        : 6
-#      MUXCY                       : 12
+#      LUT3                        : 9
+#      LUT4                        : 4
+#      LUT5                        : 7
+#      LUT6                        : 4
+#      MUXCY                       : 13
 #      VCC                         : 1
-#      XORCY                       : 13
-# FlipFlops/Latches                : 27
+#      XORCY                       : 14
+# FlipFlops/Latches                : 28
 #      FDC                         : 2
 #      FDCE                        : 11
 #      FDP                         : 1
 #      FDR                         : 8
-#      FDS                         : 5
+#      FDS                         : 6
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 12
@@ -250,15 +251,15 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              26  out of  126800     0%  
- Number of Slice LUTs:                   40  out of  63400     0%  
-    Number used as Logic:                40  out of  63400     0%  
+ Number of Slice Registers:              27  out of  126800     0%  
+ Number of Slice LUTs:                   43  out of  63400     0%  
+    Number used as Logic:                43  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     40
-   Number with an unused Flip Flop:      14  out of     40    35%  
-   Number with an unused LUT:             0  out of     40     0%  
-   Number of fully used LUT-FF pairs:    26  out of     40    65%  
+ Number of LUT Flip Flop pairs used:     43
+   Number with an unused Flip Flop:      16  out of     43    37%  
+   Number with an unused LUT:             0  out of     43     0%  
+   Number of fully used LUT-FF pairs:    27  out of     43    62%  
    Number of unique control sets:         5
 
 IO Utilization: 
@@ -290,7 +291,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 27    |
+clk                                | BUFGP                  | 28    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -301,8 +302,8 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 3.363ns (Maximum Frequency: 297.354MHz)
-   Minimum input arrival time before clock: 1.965ns
+   Minimum period: 3.402ns (Maximum Frequency: 293.945MHz)
+   Minimum input arrival time before clock: 2.029ns
    Maximum output required time after clock: 1.643ns
    Maximum combinational path delay: No path found
 
@@ -312,47 +313,47 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.363ns (frequency: 297.354MHz)
-  Total number of paths / destination ports: 494 / 46
+  Clock period: 3.402ns (frequency: 293.945MHz)
+  Total number of paths / destination ports: 548 / 47
 -------------------------------------------------------------------------
-Delay:               3.363ns (Levels of Logic = 3)
-  Source:            freqDiv/bitCount_7 (FF)
-  Destination:       transmitter/bits_reg_2 (FF)
+Delay:               3.402ns (Levels of Logic = 3)
+  Source:            freqDiv/bitCount_1 (FF)
+  Destination:       transmitter/data_reg_7 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: freqDiv/bitCount_7 to transmitter/bits_reg_2
+  Data Path: freqDiv/bitCount_1 to transmitter/data_reg_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.478   0.945  freqDiv/bitCount_7 (freqDiv/bitCount_7)
-     LUT6:I0->O            9   0.124   0.589  freqDiv/bitCount[12]_GND_2_o_equal_2_o<12>2 (freqDiv/bitCount[12]_GND_2_o_equal_2_o<12>1)
-     LUT3:I1->O            2   0.124   0.427  freqDiv/bitCount[12]_GND_2_o_equal_2_o<12>3 (freqDiv/bitCount[12]_GND_2_o_equal_2_o)
-     LUT6:I5->O            3   0.124   0.413  transmitter/_n0072_inv1 (transmitter/_n0072_inv)
-     FDCE:CE                   0.139          transmitter/bits_reg_0
+     FDR:C->Q              2   0.478   0.945  freqDiv/bitCount_1 (freqDiv/bitCount_1)
+     LUT6:I0->O            8   0.124   0.582  freqDiv/bitCount[13]_GND_2_o_equal_2_o<13>1 (freqDiv/bitCount[13]_GND_2_o_equal_2_o<13>)
+     LUT4:I2->O            4   0.124   0.441  freqDiv/bitCount[13]_GND_2_o_equal_2_o<13>3 (freqDiv/bitCount[13]_GND_2_o_equal_2_o)
+     LUT4:I3->O            8   0.124   0.445  transmitter/_n0094_inv1 (transmitter/_n0094_inv)
+     FDCE:CE                   0.139          transmitter/data_reg_0
     ----------------------------------------
-    Total                      3.363ns (0.989ns logic, 2.374ns route)
-                                       (29.4% logic, 70.6% route)
+    Total                      3.402ns (0.989ns logic, 2.413ns route)
+                                       (29.1% logic, 70.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 45 / 45
+  Total number of paths / destination ports: 46 / 46
 -------------------------------------------------------------------------
-Offset:              1.965ns (Levels of Logic = 2)
+Offset:              2.029ns (Levels of Logic = 2)
   Source:            rst (PAD)
-  Destination:       freqDiv/bitCount_0 (FF)
+  Destination:       freqDiv/bitCount_1 (FF)
   Destination Clock: clk rising
 
-  Data Path: rst to freqDiv/bitCount_0
+  Data Path: rst to freqDiv/bitCount_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            20   0.001   0.901  rst_IBUF (rst_IBUF)
-     LUT4:I0->O            8   0.124   0.445  freqDiv/bitCount[12]_GND_2_o_equal_2_o_01 (freqDiv/bitCount[12]_GND_2_o_equal_2_o_0)
-     FDR:R                     0.494          freqDiv/bitCount_0
+     IBUF:I->O             8   0.001   0.965  rst_IBUF (rst_IBUF)
+     LUT5:I0->O            8   0.124   0.445  freqDiv/bitCount[13]_GND_2_o_equal_2_o_01 (freqDiv/bitCount[13]_GND_2_o_equal_2_o_0)
+     FDR:R                     0.494          freqDiv/bitCount_1
     ----------------------------------------
-    Total                      1.965ns (0.619ns logic, 1.346ns route)
-                                       (31.5% logic, 68.5% route)
+    Total                      2.029ns (0.619ns logic, 1.410ns route)
+                                       (30.5% logic, 69.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -360,16 +361,16 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
 -------------------------------------------------------------------------
 Offset:              1.643ns (Levels of Logic = 2)
   Source:            transmitter/state_reg_FSM_FFd1 (FF)
-  Destination:       isDone (PAD)
+  Destination:       done (PAD)
   Source Clock:      clk rising
 
-  Data Path: transmitter/state_reg_FSM_FFd1 to isDone
+  Data Path: transmitter/state_reg_FSM_FFd1 to done
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q             17   0.478   0.642  transmitter/state_reg_FSM_FFd1 (transmitter/state_reg_FSM_FFd1)
-     LUT2:I0->O            1   0.124   0.399  transmitter/state_reg_isDone1 (isDone_OBUF)
-     OBUF:I->O                 0.000          isDone_OBUF (isDone)
+     LUT2:I0->O            1   0.124   0.399  transmitter/state_reg_done1 (done_OBUF)
+     OBUF:I->O                 0.000          done_OBUF (done)
     ----------------------------------------
     Total                      1.643ns (0.602ns logic, 1.041ns route)
                                        (36.6% logic, 63.4% route)
@@ -384,19 +385,19 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.363|         |         |         |
+clk            |    3.402|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 56.00 secs
-Total CPU time to Xst completion: 52.72 secs
+Total REAL time to Xst completion: 51.00 secs
+Total CPU time to Xst completion: 47.99 secs
  
 --> 
 
 
-Total memory usage is 192272 kilobytes
+Total memory usage is 192268 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

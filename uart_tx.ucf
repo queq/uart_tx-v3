@@ -2,17 +2,18 @@ NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";					#Bank = 35, Pin name = IO_
 NET "clk" TNM_NET = sys_clk_pin;
 TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
  
-
-NET "rst"			LOC = "U9"	| IOSTANDARD = "LVCMOS33";
+NET "rst"		LOC = "C12"	| IOSTANDARD = "LVCMOS33";
+# NET "rst"			LOC = "U9"	| IOSTANDARD = "LVCMOS33";
 NET "enable"			LOC = "U8"	| IOSTANDARD = "LVCMOS33" | CLOCK_DEDICATED_ROUTE = FALSE;
-NET "bit_out"				LOC = "D4"	| IOSTANDARD = "LVCMOS33";
-NET "isDone"		LOC = "F6"	| IOSTANDARD = "LVCMOS33";
+# NET "tx"				LOC = "D4"	| IOSTANDARD = "LVCMOS33";
+NET "tx"			LOC = "B13"	| IOSTANDARD = "LVCMOS33";	
+NET "done"		LOC = "F6"	| IOSTANDARD = "LVCMOS33";
 
-NET "data_o_bus<0>"			LOC = "U4"	| IOSTANDARD = "LVCMOS33";
-NET "data_o_bus<1>"			LOC = "V2"	| IOSTANDARD = "LVCMOS33";
-NET "data_o_bus<2>"			LOC = "U2"	| IOSTANDARD = "LVCMOS33";
-NET "data_o_bus<3>"			LOC = "T3"	| IOSTANDARD = "LVCMOS33";
-NET "data_o_bus<4>"			LOC = "T1"	| IOSTANDARD = "LVCMOS33";
-NET "data_o_bus<5>"			LOC = "R3"	| IOSTANDARD = "LVCMOS33";
-NET "data_o_bus<6>"			LOC = "P3"	| IOSTANDARD = "LVCMOS33";
-NET "data_o_bus<7>"			LOC = "P4"	| IOSTANDARD = "LVCMOS33";
+NET "data_i<0>"			LOC = "U4"	| IOSTANDARD = "LVCMOS33";
+NET "data_i<1>"			LOC = "V2"	| IOSTANDARD = "LVCMOS33";
+NET "data_i<2>"			LOC = "U2"	| IOSTANDARD = "LVCMOS33";
+NET "data_i<3>"			LOC = "T3"	| IOSTANDARD = "LVCMOS33";
+NET "data_i<4>"			LOC = "T1"	| IOSTANDARD = "LVCMOS33";
+NET "data_i<5>"			LOC = "R3"	| IOSTANDARD = "LVCMOS33";
+NET "data_i<6>"			LOC = "P3"	| IOSTANDARD = "LVCMOS33";
+NET "data_i<7>"			LOC = "P4"	| IOSTANDARD = "LVCMOS33";

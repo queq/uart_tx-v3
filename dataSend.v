@@ -4,10 +4,10 @@ module dataSend
 	)
 	(
 		input wire clk, rst, enable,
-		input wire [12:0] q,
-		input wire [7:0] data_o_bus,
-		output reg isDone,
-		output wire bit_out
+		input wire [13:0] q,
+		input wire [7:0] data_i,
+		output reg done,
+		output wire tx
 	);
 
 	localparam [1:0]
@@ -39,7 +39,7 @@ module dataSend
 
 	always @(*)
 		begin
-			isDone = 1'b0;
+			done = 1'b0;
 			state_next = state_reg;
 			bits_next = bits_reg;
 			data_next = data_reg;
@@ -52,10 +52,10 @@ module dataSend
 						tx_next = 1'b1;
 						if (enable)
 							begin
-								if (q == 13'b0)
+								if (q == 14'b0)
 									begin
 										state_next = START;
-										data_next = data_o_bus;
+										data_next = data_i;
 									end
 							end			
 					end
@@ -63,7 +63,7 @@ module dataSend
 				START:
 					begin
 						tx_next = 1'b0;
-						if (q == 13'b0)
+						if (q == 14'b0)
 							begin
 								state_next = DATA;
 								bits_next = 0;
@@ -73,7 +73,7 @@ module dataSend
 				DATA:
 					begin
 						tx_next = data_reg[0];
-						if (q == 13'b0)
+						if (q == 14'b0)
 							begin
 								data_next = data_reg >> 1;
 								if (bits_reg == (BITS - 1))
@@ -86,12 +86,12 @@ module dataSend
 				STOP:
 					begin
 						tx_next = 1'b1;
-						isDone = 1'b1;
-						if (q == 13'b0) if (~enable) state_next = IDLE;								
+						done = 1'b1;
+						if (q == 14'b0) if (~enable) state_next = IDLE;								
 					end
 		endcase
 	end
 
-	assign bit_out = tx_reg;
+	assign tx = tx_reg;
 
 endmodule

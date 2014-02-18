@@ -1,36 +1,37 @@
 //! **************************************************************************
-// Written by: Map P.68d on Fri Jan 24 10:52:29 2014
+// Written by: Map P.68d on Wed Jan 29 10:04:12 2014
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "data_i<3>" LOCATE = SITE "T3" LEVEL 1;
+COMP "data_i<4>" LOCATE = SITE "T1" LEVEL 1;
+COMP "data_i<5>" LOCATE = SITE "R3" LEVEL 1;
+COMP "data_i<6>" LOCATE = SITE "P3" LEVEL 1;
+COMP "data_i<7>" LOCATE = SITE "P4" LEVEL 1;
 COMP "clk" LOCATE = SITE "E3" LEVEL 1;
-COMP "bit_out" LOCATE = SITE "D4" LEVEL 1;
 COMP "enable" LOCATE = SITE "U8" LEVEL 1;
 PIN enable_pin<0> = BEL "enable" PINNAME PAD;
 PIN "enable_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
-COMP "data_o_bus<0>" LOCATE = SITE "U4" LEVEL 1;
-COMP "isDone" LOCATE = SITE "F6" LEVEL 1;
-COMP "data_o_bus<1>" LOCATE = SITE "V2" LEVEL 1;
-COMP "data_o_bus<2>" LOCATE = SITE "U2" LEVEL 1;
-COMP "data_o_bus<3>" LOCATE = SITE "T3" LEVEL 1;
-COMP "data_o_bus<4>" LOCATE = SITE "T1" LEVEL 1;
-COMP "data_o_bus<5>" LOCATE = SITE "R3" LEVEL 1;
-COMP "data_o_bus<6>" LOCATE = SITE "P3" LEVEL 1;
-COMP "data_o_bus<7>" LOCATE = SITE "P4" LEVEL 1;
-COMP "rst" LOCATE = SITE "U9" LEVEL 1;
+COMP "tx" LOCATE = SITE "B13" LEVEL 1;
+COMP "done" LOCATE = SITE "F6" LEVEL 1;
+COMP "rst" LOCATE = SITE "C12" LEVEL 1;
+COMP "data_i<0>" LOCATE = SITE "U4" LEVEL 1;
+COMP "data_i<1>" LOCATE = SITE "V2" LEVEL 1;
+COMP "data_i<2>" LOCATE = SITE "U2" LEVEL 1;
 TIMEGRP sys_clk_pin = BEL "freqDiv/bitCount_0" BEL "freqDiv/bitCount_1" BEL
         "freqDiv/bitCount_2" BEL "freqDiv/bitCount_3" BEL "freqDiv/bitCount_4"
         BEL "freqDiv/bitCount_5" BEL "freqDiv/bitCount_6" BEL
         "freqDiv/bitCount_7" BEL "freqDiv/bitCount_8" BEL "freqDiv/bitCount_9"
-        BEL "freqDiv/bitCount_12" BEL "freqDiv/bitCount_10" BEL
-        "freqDiv/bitCount_11" BEL "transmitter/bits_reg_2" BEL
-        "transmitter/bits_reg_1" BEL "transmitter/bits_reg_0" BEL
-        "transmitter/state_reg_FSM_FFd1" BEL "transmitter/state_reg_FSM_FFd2"
-        BEL "transmitter/data_reg_7" BEL "transmitter/data_reg_6" BEL
-        "transmitter/data_reg_5" BEL "transmitter/data_reg_4" BEL
-        "transmitter/data_reg_3" BEL "transmitter/data_reg_2" BEL
-        "transmitter/data_reg_1" BEL "transmitter/data_reg_0" BEL
-        "transmitter/tx_reg" BEL "clk_BUFGP/BUFG";
+        BEL "freqDiv/bitCount_10" BEL "freqDiv/bitCount_11" BEL
+        "freqDiv/bitCount_12" BEL "freqDiv/bitCount_13" BEL
+        "transmitter/bits_reg_2" BEL "transmitter/bits_reg_1" BEL
+        "transmitter/bits_reg_0" BEL "transmitter/state_reg_FSM_FFd1" BEL
+        "transmitter/state_reg_FSM_FFd2" BEL "transmitter/data_reg_7" BEL
+        "transmitter/data_reg_6" BEL "transmitter/data_reg_5" BEL
+        "transmitter/data_reg_4" BEL "transmitter/data_reg_3" BEL
+        "transmitter/data_reg_2" BEL "transmitter/data_reg_1" BEL
+        "transmitter/data_reg_0" BEL "transmitter/tx_reg" BEL
+        "clk_BUFGP/BUFG";
 TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 SCHEMATIC END;
 

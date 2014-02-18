@@ -4,7 +4,7 @@ Loading device for application Rf_Device from file '7a100t.nph' in environment
 /opt/Xilinx/14.6/ISE_DS/ISE/.
    "uart_tx" is an NCD, version 3.2, device xc7a100t, package csg324, speed -1
 
-Fri Jan 24 10:57:13 2014
+Wed Jan 29 10:09:14 2014
 
 /opt/Xilinx/14.6/ISE_DS/ISE/bin/lin/unwrapped/bitgen -l -w -g TdoPin:PULLNONE -g DonePin:PULLUP -g CRC:enable -g StartUpClk:CCLK project_r.ncd 
 
